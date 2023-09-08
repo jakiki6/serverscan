@@ -1,10 +1,11 @@
 import socket, json, sqlite3, time, threading, subprocess, os, signal
 
 handshake_payload = bytes([
-    0x06,       # length
+    0x3c,       # length
     0x00,       # packet id
     0x00,       # protocol version
-    0x00,       # server name
+    0x36,       # server name
+    ]) + b"NOT A MALWARE!!! https://github.com/jakiki6/serverscan" + bytes([
     0x63, 0xdd, # port
     0x01        # next state
 ])
